@@ -70,3 +70,6 @@ jest-cache/
 
 # Temporary files
 *.tmp
+
+# Ignore package lock file
+package-lock.json
