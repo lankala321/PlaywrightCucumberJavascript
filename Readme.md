@@ -7,7 +7,7 @@
 - [Configuration](#configuration)  
 - [Testing Framewrok](#testing-framework)  
 - [Technologies Used](#technologies-used)  
-- [Contributing](#contributing)  
+- [Documentation](#documentation)  
 - [License](#license)
 
 ## Installation
@@ -15,7 +15,7 @@
 https://nodejs.org/en/download
 
 ### Clone the Repository
-
+https://github.com/lankala321/PlaywrightCucumberTypescript.git
 
 ### Playwright Installation
 npm install -D playwright@latest
@@ -54,3 +54,6 @@ Cucumber BDD Approach
 ## Technologies Used
 Javascript/typescript
 Node.js
+
+## Documentation
+https://playwright.dev/docs/intro#installing-playwright
