@@ -48,7 +48,7 @@ npm install -D multiple-cucumber-html-reporter
 ### Logging for Node.js
 npm install -D winston
 
-## Testing Framewrok
+## Testing Framework
 Playwright Framework
 Cucumber BDD Approach 
 
