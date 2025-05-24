@@ -18,8 +18,7 @@ https://nodejs.org/en/download
 
 
 ### Playwright Installation
-npm install -D playwright
-npx playwright install
+npm install -D playwright@latest
 
 ### Use below only when PowerShell session does not have permission to write the policy
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force

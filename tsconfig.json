@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                          // Modern JS features
+    "module": "CommonJS",                        // Node.js uses CommonJS
+    "lib": ["ES2022", "DOM"],                    // Includes DOM types for Playwright
+    "declaration": true,
+    "outDir": "./dist",                          // Compiled output folder
+    "rootDir": "./src",                             // Source root
+    "strict": true,                              // Enable all strict type-checking options
+    "esModuleInterop": true,                     // Allow default imports from CommonJS
+    "moduleResolution": "node",                  // Resolve modules like Node.js
+    "resolveJsonModule": true,                   // Allow importing JSON files
+    "types": ["node", "cucumber", "playwright"], // Include types for Node.js, Cucumber, and Playwright
+    "skipLibCheck": true,                        // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true     // Enforce consistent import casing
+  },
+  "include": ["src/**/*.ts", "features/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

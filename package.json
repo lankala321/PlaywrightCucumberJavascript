@@ -1,4 +1,20 @@
 {
+  "name": "playwright-cucumber-typescript",
+  "version": "1.0.0",
+  "description": "Playwright Cucumber Typescript framework",
+  "main": "dist/index.js",
+  "types": "dist",
+  "files": ["dist/**/*"],
+  "scripts": {
+    "install": "npm install && npm install -D playwright@latest && npm install -D @cucumber/cucumber && npm install -D @types/node && npm install -D ts-node && npm install -D dotenv && npm install -D fs-extra && npm install -D multiple-cucumber-html-reporter && npm install -D winston"
+  },
+  "keywords": [
+    "playwright-framwork",
+    "cucumber-BDD",
+    "typescript"
+  ],
+  "author": "Lankala",
+  "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^11.3.0",
     "@types/node": "^22.15.21",
@@ -10,3 +26,4 @@
     "winston": "^3.17.0"
   }
 }
+
