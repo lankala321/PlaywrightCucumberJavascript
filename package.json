@@ -4,9 +4,17 @@
   "description": "Playwright Cucumber Typescript framework",
   "main": "dist/index.js",
   "types": "dist",
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
-    "install": "npm install && npm install -D playwright@latest && npm install -D @cucumber/cucumber && npm install -D @types/node && npm install -D ts-node && npm install -D dotenv && npm install -D fs-extra && npm install -D multiple-cucumber-html-reporter && npm install -D winston"
+    "install:all": "npm install",
+    "codegen": "npx playwright codegen https://www.saucedemo.com/ --target javascript --output src/test/objectRepository/Codegen.ts",
+    "pretest": "cross-env ENV=test npx ts-node src/framework/report/init.ts",
+    "test": "cross-env ENV=test FORCE_COLOR=0 cucumber-js --config=src/framework/env/cucumber.js",
+    "test:smoke": "cross-env ENV=test cucumber-js --config=src/framework/env/cucumber.js --tags='@smoke'",
+    "posttest": "cross-env ENV=test npx ts-node src/framework/report/report.ts",
+    "debug:test":  "cross-env ENV=test PWDEBUG=1 DEBUG=pw:api cucumber-js --config=src/framework/env/cucumber.js"
   },
   "keywords": [
     "playwright-framwork",
@@ -17,13 +25,14 @@
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^11.3.0",
-    "@types/node": "^22.15.21",
+    "@playwright/test": "^1.53.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.15.31",
     "dotenv": "^16.5.0",
     "fs-extra": "^11.3.0",
+    "cross-env": "^7.0.3",
     "multiple-cucumber-html-reporter": "^3.9.2",
-    "playwright": "^1.52.0",
     "ts-node": "^10.9.2",
     "winston": "^3.17.0"
   }
 }
-

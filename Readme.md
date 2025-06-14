@@ -57,3 +57,29 @@ Node.js
 
 ## Documentation
 https://playwright.dev/docs/intro#installing-playwright
+
+
+
+Web Application for testing
+https://parabank.parasoft.com/parabank/index.htm
+https://demoqa.com/
+https://the-internet.herokuapp.com/
+https://www.saucedemo.com/
+https://demo.opencart.com/
+https://petstore.swagger.io/
+
+
+Playwright Codegen
+
+
+ "install:all": "npm install && npm install -D @playwright/test@latest && npm install -D @cucumber/cucumber && npm install -D @types/node && npm install -D ts-node && npm install -D cross-env && npm install -D dotenv && npm install -D @types/fs-extra && npm install -D multiple-cucumber-html-reporter && npm install -D winston",
+
+ | Task                    | Command                                                     |
+| ----------------------- | ----------------------------------------------------------- |
+| Run all tests           | `npm run test`                                              |
+| Run only one `.feature` | `npm run test -- src/test/features/inventory.feature`       |
+| Run one scenario by tag | `npm run test -- --tags @smoke`                             |
+| Debug a single file     | `npm run debug:test -- src/test/features/inventory.feature` |
+npm run test --TAG="@smoke"
+
+
