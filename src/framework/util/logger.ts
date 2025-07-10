@@ -4,6 +4,7 @@ import { transports, format } from 'winston';
 export function options(scenarioName: string) {
     return {
         transports: [
+            new transports.Console(),
             new transports.File({
                 // dynamically set the filename based on the scenario name
                 filename: `${process.env.LOG_PATH || 'test-results/logs'}/${scenarioName}/log.log`,
